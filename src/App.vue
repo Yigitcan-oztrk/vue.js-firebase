@@ -14,7 +14,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="book in meeting">
+            <tr v-for="book in books">
               <td>{{ book.name }}</td>
               <td>{{ book.subject }}</td>
             </tr>
@@ -27,34 +27,28 @@
 </template>
 
 <script>
-import Firebase from "firebase";
+import firebase from "firebase";
 
 let config = {
-  apiKey: "AIzaSyDOsHF7SbXlpdjJs06f4Yvhd7u0xcK9ZFo",
-  authDomain: "meeting-7b35c.firebaseapp.com",
-  databaseURL: "https://meeting-7b35c-default-rtdb.firebaseio.com",
-  projectId: "meeting-7b35c",
-  storageBucket: "meeting-7b35c.appspot.com",
-  messagingSenderId: "239976746963",
-  appId: "1:239976746963:web:933c0b1421098602772926",
-  measurementId: "G-XM8S3TE2ZR",
+    apiKey: "AIzaSyDZsdkJBQTPGkRlM8twcwx06pvY8cd6ouU",
+    authDomain: "books-e8d30.firebaseapp.com",
+    projectId: "books-e8d30",
+    storageBucket: "books-e8d30.appspot.com",
+    messagingSenderId: "979938154021",
+    appId: "1:979938154021:web:96bdba4d18a86cedc051cc",
+    measurementId: "G-60GMG41Y4F"
 };
-let app = Firebase.initializeApp(config);
+let app = firebase.initializeApp(config);
 let db = app.database();
-let bookRef = db.ref("meeting");
+let bookRef = db.ref("books");
 
 export default {
   name: "App",
-
   firebase: {
-    meeting: bookRef,
+    books: bookRef,
   },
 };
 </script>
-
-
-
-
 
 <style>
 #app {
