@@ -9,6 +9,8 @@ import router from './router'
 Vue.use(firestorePlugin)
 Vue.config.productionTip = false
 
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
