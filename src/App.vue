@@ -27,16 +27,17 @@
 </template>
 
 <script>
-import firebase from "firebase";
+import firebase from 'firebase';
 
 let config = {
   apiKey: "AIzaSyDZsdkJBQTPGkRlM8twcwx06pvY8cd6ouU",
   authDomain: "books-e8d30.firebaseapp.com",
+  databaseURL: "https://books-e8d30-default-rtdb.firebaseio.com",
   projectId: "books-e8d30",
   storageBucket: "books-e8d30.appspot.com",
   messagingSenderId: "979938154021",
   appId: "1:979938154021:web:96bdba4d18a86cedc051cc",
-  measurementId: "G-60GMG41Y4F",
+  measurementId: "G-60GMG41Y4F"
 };
 let app = firebase.initializeApp(config);
 let db = app.database();
