@@ -28,11 +28,10 @@
 
 <script>
 
+import firebase from '../src/firebase/config'
 
 
 
-database = app.database();
-books = db.ref("books");
 
 export default {
   name: "App",

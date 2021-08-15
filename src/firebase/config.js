@@ -16,7 +16,8 @@ const config = {
 
 firebase.initializeApp(config)
 
-const books = firebase.storage();
-const database=firebase.firestore
+const fb = firebase.initializeApp(config);
 
-const tarih = firebase.firestore
+const db = firebase.firestore();
+
+export { fb, db }
