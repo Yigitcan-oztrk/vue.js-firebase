@@ -29,6 +29,7 @@
 <script>
 import firebase from "firebase";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyDZsdkJBQTPGkRlM8twcwx06pvY8cd6ouU",
   authDomain: "books-e8d30.firebaseapp.com",

@@ -1,11 +1,13 @@
 import Vue from 'vue'
 
-import { firestorePlugin } from 'vuefire'
+import firebase from 'firebase/app';
+import 'firebase/database'; 
+import 'firebase/storage';  
 
 
 import App from './App.vue'
 
-Vue.use(firestorePlugin)
+Vue.use(firebase)
 
 new Vue({
   el: '#app',
