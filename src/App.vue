@@ -27,29 +27,16 @@
 </template>
 
 <script>
-import firebase from "firebase";
-import 'firebase/auth';        // for authentication
-import 'firebase/storage';     // for storage
-import 'firebase/database';    // for realtime database
-import 'firebase/firestore';   // for cloud firestore
-import 'firebase/messaging';   // for cloud messaging
-import 'firebase/functions';   // for cloud functions
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDZsdkJBQTPGkRlM8twcwx06pvY8cd6ouU",
-  authDomain: "books-e8d30.firebaseapp.com",
-  databaseURL: "https://books-e8d30-default-rtdb.firebaseio.com",
-  projectId: "books-e8d30",
-  storageBucket: "books-e8d30.appspot.com",
-  messagingSenderId: "979938154021",
-  appId: "1:979938154021:web:96bdba4d18a86cedc051cc",
-  measurementId: "G-60GMG41Y4F",
-};
 
-let app = firebase.initializeApp(firebaseConfig);
-let db = app.database();
-let bookRef = db.ref("books")
 
+import fire from './main';
+
+class App extends Component {
+    componentWillMount(){
+        let messagesRef = fire.database().ref('messages').orderByKey().limitToLast(100);
+    }
+}
 export default {
   name: "app",
   firebase: {
